@@ -1,10 +1,14 @@
+// taskBlock.js
 export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+  var task = false;
+  var task2 = true;
 
   if (trueOrFalse) {
-    task = true;
-    task2 = false;
+    (function() {
+      var task = true;
+      var task2 = false;
+      // Variables task and task2 inside this function are scoped to this block
+    })();
   }
 
   return [task, task2];
