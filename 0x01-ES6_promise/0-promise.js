@@ -1,14 +1,14 @@
 function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    // Simulate an asynchronous operation using setTimeout
+    // Simulating an asynchronous API call
     setTimeout(() => {
-      const success = true;
+      const response = { data: 'This is the response from the API' };
+      resolve(response);
+    }, 2000); // Simulating a 2-second delay
 
-      if (success) {
-        resolve("Data fetched successfully!");
-      } else {
-        reject("Failed to fetch data.");
-      }
-    }, 2000);
+    // Handle errors
+    // reject(new Error('Error fetching data from API'));
   });
 }
+
+export default getResponseFromAPI;
