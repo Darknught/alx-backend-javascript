@@ -5,8 +5,8 @@ export default function taskBlock(trueOrFalse) {
 
   if (trueOrFalse) {
     (function taskFunction() {
-      var task = true;
-      var task2 = false;
+      var task = true; // eslint-disable-line no-unused-vars
+      var task2 = false; // eslint-disable-line no-unused-vars
       // Variables task and task2 inside this function are scoped to this block
     })();
   }
