@@ -1,5 +1,5 @@
 export default function createIteratorObject(report) {
-  const allEmployees = report.allEmployees;
+  const { allEmployees } = report;
   const employees = [];
 
   // Flatten the employees into a single array
@@ -17,8 +17,8 @@ export default function createIteratorObject(report) {
             return { value: employees[index++], done: false };
           }
           return { done: true };
-        }
+        },
       };
-    }
+    },
   };
 }
