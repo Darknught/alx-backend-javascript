@@ -1,5 +1,5 @@
-import { signUpUser } from './4-user-promise';
-import { uploadPhoto } from './5-photo-reject';
+import signUpUser from './4-user-promise';
+import uploadPhoto from './5-photo-reject';
 
 /**
  * Handles the profile signup process by calling the `signUpUser` and `uploadPhoto` functions.
