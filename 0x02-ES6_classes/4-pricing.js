@@ -1,5 +1,8 @@
 // A function that implements a class Pricing imported from Currency
+
+/* eslint-disable no-unused-vars */
 import Currency from './3-currency';
+/* eslint-disable no-unused-vars */
 
 export default class Pricing {
   constructor(amount, currency) {
