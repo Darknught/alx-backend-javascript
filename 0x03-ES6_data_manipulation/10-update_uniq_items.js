@@ -9,7 +9,7 @@
 export default function updateUniqueItems(map) {
   // Check if the input is a Map object
   if (!(map instanceof Map)) {
-    throw new Error("Cannot process");
+    throw new Error('Cannot process');
   }
 
   // Iterate over the entries in the map
