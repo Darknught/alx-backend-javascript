@@ -3,5 +3,5 @@ export default function hasValuesFromArray(set, array) {
   const setArray = Array.from(set);
 
   // Check if every element in the input arrayt exists in the set
-  return array.every(value => setArray.includes(value));
+  return array.every((value) => setArray.includes(value));
 }
