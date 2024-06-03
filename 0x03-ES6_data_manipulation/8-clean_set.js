@@ -3,12 +3,12 @@ export default function cleanSet(set, startString) {
     return '';
   }
 
-  const filteredValues = [...set].filter(value => {
+  const filteredValues = [...set].filter((value) => {
     if (typeof value === 'string') {
       return value.startsWith(startString);
     }
     return false;
-  }).map(value=> value.slice(startString.length));
+  }).map((value) => value.slice(startString.length));
 
   return filteredValues.join('-');
 }
