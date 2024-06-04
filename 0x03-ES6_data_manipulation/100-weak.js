@@ -27,8 +27,8 @@ export function queryAPI(endpoint) {
     weakMap.set(endpoint, queryCount);
   } else {
     // If the endpoint is in the weakMap, increment the query count
-    queryCount++;
-    weakMap.set(endpoint, queryCount);
+    weakMap.set(endpoint, queryCount + 1);
+    queryCount += 1;
   }
 
   // If the query count is greater than or equal to 5, throw an error
