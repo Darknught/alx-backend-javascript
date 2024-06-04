@@ -1,6 +1,4 @@
 // Export a WeakMap instance named 'weakMap'
-import fetch from 'node-fetch';
-
 export const weakMap = new WeakMap();
 
 /**
