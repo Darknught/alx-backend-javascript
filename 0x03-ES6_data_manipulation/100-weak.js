@@ -37,6 +37,7 @@ export function queryAPI(endpoint) {
   }
 
   // Make the API request using the fetch API
+  /* eslint-disable-next-line no-undef */
   return fetch(url)
     .then((response) => response.json())
     .catch((error) => console.error(`Error querying API: ${error}`));
