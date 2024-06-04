@@ -11,7 +11,7 @@ export const weakMap = new WeakMap();
  * @throws {Error} - Throws an error with the message "Endpoint load is high"
  * if the number of queries for the endpoint is greater than or equal to 5.
  */
-export default function queryAPI(endpoint) {
+export function queryAPI(endpoint) {
   // Destructure the endpoint object
   const { protocol, name } = endpoint;
 
