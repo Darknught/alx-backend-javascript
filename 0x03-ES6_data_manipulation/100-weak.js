@@ -33,11 +33,11 @@ export function queryAPI(endpoint) {
 
   // If the query count is greater than or equal to 5, throw an error
   if (queryCount >= 5) {
-    throw new Error("Endpoint load is high");
+    throw new Error('Endpoint load is high');
   }
 
   // Make the API request using the fetch API
   return fetch(url)
-    .then(response => response.json())
-    .catch(error => console.error(`Error querying API: ${error}`));
+    .then((response) => response.json())
+    .catch((error) => console.error(`Error querying API: ${error}`));
 }
