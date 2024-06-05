@@ -51,13 +51,26 @@ function createEmployee(salary: number | string): Director | Teacher {
     }
 }
 
+// Type guards to differentiate between Director and Teacher
+function isDirector(employee: Director | Teacher): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function isTeacher(employee: Director | Teacher): employee is Teacher {
+    return (employee as Teacher).workTeacherTasks !== undefined;
+}
+
 // Example usage
 const employee1 = createEmployee(300);
-console.log(employee1.workFromHome()); // Output: Cannot work from home
-console.log(employee1.getCoffeeBreak()); // Output: Cannot have a break
-console.log(employee1.workTeacherTasks()); // Output: Getting to work
+if (isTeacher(employee1)) {
+    console.log(employee1.workFromHome()); // Output: Cannot work from home
+    console.log(employee1.getCoffeeBreak()); // Output: Cannot have a break
+    console.log(employee1.workTeacherTasks()); // Output: Getting to work
+}
 
 const employee2 = createEmployee(1000);
-console.log(employee2.workFromHome()); // Output: Working from home
-console.log(employee2.getCoffeeBreak()); // Output: Getting a coffee break
-console.log(employee2.workDirectorTasks()); // Output: Getting to director tasks
+if (isDirector(employee2)) {
+    console.log(employee2.workFromHome()); // Output: Working from home
+    console.log(employee2.getCoffeeBreak()); // Output: Getting a coffee break
+    console.log(employee2.workDirectorTasks()); // Output: Getting to director tasks
+}
