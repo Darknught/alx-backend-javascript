@@ -60,17 +60,11 @@ function isTeacher(employee: Director | Teacher): employee is Teacher {
     return (employee as Teacher).workTeacherTasks !== undefined;
 }
 
-// Example usage
-const employee1 = createEmployee(300);
-if (isTeacher(employee1)) {
-    console.log(employee1.workFromHome()); // Output: Cannot work from home
-    console.log(employee1.getCoffeeBreak()); // Output: Cannot have a break
-    console.log(employee1.workTeacherTasks()); // Output: Getting to work
-}
-
-const employee2 = createEmployee(1000);
-if (isDirector(employee2)) {
-    console.log(employee2.workFromHome()); // Output: Working from home
-    console.log(employee2.getCoffeeBreak()); // Output: Getting a coffee break
-    console.log(employee2.workDirectorTasks()); // Output: Getting to director tasks
+// Function to execute the appropriate work based on the employee type
+function executeWork(employee: Director | Teacher): void {
+    if (isDirector(employee)) {
+        console.log(employee.workDirectorTasks());
+    } else if (isTeacher(employee)) {
+        console.log(employee.workTeacherTasks());
+    }
 }
