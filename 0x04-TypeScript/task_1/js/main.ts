@@ -31,6 +31,20 @@ const teacher2: Teacher = {
     contract: false // Additional property
 };
 
+// Define the interface for the printTeacher function
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+// Implement the printTeacher function
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example usage of the printTeacher function
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
+console.log(printTeacher("Alice", "Johnson")); // Output: A. Johnson
+
 // Create a sample director object
 const director1: Directors = {
     firstName: "Michael",
