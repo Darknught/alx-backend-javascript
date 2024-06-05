@@ -8,6 +8,11 @@ interface Teacher {
     [propName: string]: any; // This allows any additional properties
 }
 
+// Define the Directors interface that extends Teacher
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
 // Create a sample teacher object
 const teacher1: Teacher = {
     firstName: "John",
@@ -26,6 +31,17 @@ const teacher2: Teacher = {
     contract: false // Additional property
 };
 
-// Log the teacher objects to the console
+// Create a sample director object
+const director1: Directors = {
+    firstName: "Michael",
+    lastName: "Scott",
+    fullTimeEmployee: true,
+    location: "Scranton",
+    numberOfReports: 10,
+    contract: true // Additional property
+};
+
+// Log the teacher and director objects to the console
 console.log(teacher1);
 console.log(teacher2);
+console.log(director1);
